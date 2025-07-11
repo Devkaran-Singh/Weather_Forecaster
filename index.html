@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecaster</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body
+    class="bg-amber-300 font-sans flex justify-center items-center min-h-lvh"
+  >
+    <div id="container" class="bg-amber-100 h-auto w-[500px] rounded-3xl">
+      <div id="heading" class="flex justify-center">
+        <h1 class="text-3xl text-gray-600 p-5">Weather App</h1>
+      </div>
+      <div>
+        <input
+          id="input-field"
+          type="text"
+          placeholder="Enter name of the place..."
+          class="bg-white w-[300px] p-3 m-4 rounded-2xl outline-0 text-gray-800"
+        />
+        <button
+          id="weather-button"
+          class="bg-amber-300 w-[120px] p-3 m-4 outline-0 rounded-2xl text-white text-[16px] font-bold hover: cursor-pointer hover:opacity-70 active:opacity-40"
+        >
+          Get Weather
+        </button>
+      </div>
+      <div id="weather-display" class="hidden items-center flex-col m-5">
+        <h1 id="city-name" class="text-4xl text-gray-700 p-5 font-bold"></h1>
+        <p id="temperature" class="text-xl text-gray-700"></p>
+        <p id="humidity" class="text-xl text-gray-700"></p>
+        <p id="weather" class="text-xl text-gray-700"></p>
+      </div>
+      <div id="error-message" class="hidden justify-center">
+        <p class="text-xl text-gray-800 p-6">Sorry, no such city found</p>
+      </div>
+    </div>
+  </body>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</html>
